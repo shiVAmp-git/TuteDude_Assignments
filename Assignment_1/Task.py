@@ -35,10 +35,24 @@ price_dict["Cup"] = 250
 
 for value in price_dict.values():
     value += value
-
+   
 avg_value = value/price_dict.__len__()    
 print(f"Average Value is {avg_value:.2f}")
 
+price = 0
+for key,value in price_dict.items():
+    if value > price:
+        price = value
+        product = key
+
+print(f"{product} has maximum value which is {price}")
+
+for keys,values in price_dict.items():
+    if values < price:
+        price = values
+        min_product = keys
+
+print(f"{min_product} has minimum value which is {price}")        
 # Task 4
 
 catalog = [("Ball" , 10 ,"Sports"),
@@ -57,17 +71,13 @@ for items in catalog:
    else:
        category_to_products[items[2]].append(items[0])
 
+max_count = 1
 
 for key_x,value_x in category_to_products.items():
-    for key_y,value_y in category_to_products.items():
-        if category_to_products[key_x].__len__() >= category_to_products[key_y].__len__():
-                    pass
-        else :
-             key_x = key_y
- 
-max_count = key_x
+    if value_x.__len__() > max_count:
+        max_count = value_x.__len__()    
+      
              
-
 print(f"Your category who has most produt is {max_count}")
 
 
