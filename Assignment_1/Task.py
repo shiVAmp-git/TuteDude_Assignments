@@ -1,5 +1,5 @@
 # Task 1
-products = ["Ball" , "Notebook" , "Cup" , "Ice-cream" , "Headphone" , "Purse"]
+products = ["Ball" , "Notebook" , "Cup" , "Ice-cream" , "Headphone" , "Purse", "pencil"]
 sample_product = ("Book" , 50 , "Stationery")
 
 print(products[1::4])
@@ -29,7 +29,7 @@ print(f"there is total {total_categories} categories in set")
 
 # Task 3
 
-price_dict = { "Ball": 10 , "Notebook" :60 , "Cup" : 150 , "Ice-cream" : 65 , "Headphone" : 2999 , "Purse" : 599 }
+price_dict = { "Ball": 10 , "Notebook" :60 , "Cup" : 150 , "Ice-cream" : 65 , "Headphone" : 2999 , "Purse" : 599 , "Pencil" : 5 , "Tablefan" : 1499 }
 price_dict["Shirt"] = 799
 price_dict["Cup"] = 250
 
@@ -54,30 +54,23 @@ for keys,values in price_dict.items():
 
 print(f"{min_product} has minimum value which is {price}")        
 # Task 4
-
-catalog = [("Ball" , 10 ,"Sports"),
-           ("Notebook" , 60 , "Stationery"),
-           ("Cup" , 250 , "Kitchen-accessories"),
-           ("Ice-cream", 65 , "Dairy-product"),
-           ("Headphone" , 2999 ,"Electronics"),
-           ("Purse" , 599 , "Fashion-accessories"),
-           ("Pencil" , 3 , "Stationery") ]
-
+cat_map = { "Ball": "Sports" , "Notebook" : "Stationery" , "Cup" : "kitchen-accessories" , "Ice-cream" : "Dairy-product" , "Headphone" : "Electronics" , "Purse" : "Fashion-accessories" , "Pencil" : "Stationery" , "Tablefan" : "Electrics" , "Shirt" : "Fashion" }
+catalog =[(p,price_dict[p],cat_map.get(p))  for p in price_dict]
 category_to_products= {}
 for items in catalog:
-   if items[2] not in category_to_products.keys():
-       category_to_products[items[2]] = [items[0]]
+   if items[2] in category_to_products.keys():
+       category_to_products[items[2]].append(items[0])
 
    else:
-       category_to_products[items[2]].append(items[0])
+       category_to_products[items[2]] = [items[0]]
 
 max_count = 1
 
 for key_x,value_x in category_to_products.items():
     if value_x.__len__() > max_count:
-        max_count = value_x.__len__()    
+        max_count = value_x.__len__()
+        max_category = key_x    
       
              
-print(f"Your category who has most produt is {max_count}")
-
+print(f"{max_category}has most product is {max_count}")
 
