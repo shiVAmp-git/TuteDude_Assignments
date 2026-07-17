@@ -1,3 +1,4 @@
 def password_checker(password):
-    if len(password) >8 and 
+    if len(password) >8 :
+        pass
 

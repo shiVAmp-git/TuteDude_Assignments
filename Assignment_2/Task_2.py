@@ -1,4 +1,5 @@
 orders = [1200,2500,800,1750,3000]
+revenue = 0
 print("| Order Amount | discount% | Final Amount ")
 for amount in orders:
     if amount>=2000:
@@ -18,6 +19,8 @@ for amount in orders:
          final_amount = amount    
 
     print(f"| {amount} | {discount} | {final_amount} |")
+    revenue = revenue + amount
+print(f"Total revenue is INR{revenue}")
 i = 0 
 for amount in orders:
      if amount>1000:

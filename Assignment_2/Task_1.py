@@ -1,8 +1,12 @@
 # Task 1
-
-order_amount = input("Enter bill amount:")
-if type(order_amount) == str:
-    print("Only Integers and Floats allowd")
+order_amount = 0 
+order_amount_input = input("Enter bill amount:")
+if order_amount_input.isdigit():
+    order_amount = int(order_amount_input)
+    print("You entered:",order_amount)
+else:
+    print("Please enter a valid number")    
+    exit()
 
 if order_amount>=2000:
     discounted_price =order_amount- (order_amount*15)/100
