@@ -6,6 +6,6 @@ def factorial(n):
     else:
         num = int(n)
         return num * factorial(num-1)
-    
-
+factorial(5)    
+factorial(0)
 factorial(-3)
