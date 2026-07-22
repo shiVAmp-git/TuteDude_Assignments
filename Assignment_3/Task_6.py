@@ -1,5 +1,9 @@
-def process_prices():
-    n = int(input("Enter no of item's price you want to listout:"))
-    i = 0
-    while i<n:
-        pass
+def process_prices(prices):
+    discount = lambda price:price - price/10
+    print(discount(prices))
+    for price in prices:
+        if price<300:
+            pass
+        else:
+            prices.remove(price)
+    print(prices)        
