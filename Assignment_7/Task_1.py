@@ -13,6 +13,5 @@ bat = Product("Bat",2500,"Sports")
 bat.get_info()
 bat.apply_discount(10)
 headphone = Product("headphone",2000,"Electronincs")
-headphone.get_info()
+headphone.get_info()    
 headphone.apply_discount(20)
-bat.name
