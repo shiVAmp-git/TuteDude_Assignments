@@ -8,7 +8,9 @@ class Product:
     def __str__(self):
         return f"this product is {self.name} it covered in {self.category} category with price INR {self.price}"
     def __add__(self, other):
-        return f"this both proucts' total price is {self.price} "
+        return f"this both proucts' total price is {self.price+other.price} "
 bat = Product("Bat",2500,"Sports")
 headphone = Product("headphone",2000,"Electronincs")
+print(bat)
+print(headphone)
 print(bat.__add__(headphone))
