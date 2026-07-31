@@ -1,11 +1,11 @@
 def factorial(n):
-    if n == 0 or n==1:
+    if n < 0:
+        return "Invalid Number"
+    elif n == 0 or n == 1:
         return 1
-    elif n<0 :
-        return print("Invalid Number")
     else:
-        num = int(n)
-        return num * factorial(num-1)
-factorial(5)    
-factorial(0)
-factorial(-3)
+        return n * factorial(n - 1)
+
+print(factorial(5))
+print(factorial(0))
+print(factorial(-3))
