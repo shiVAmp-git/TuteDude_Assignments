@@ -1,0 +1,71 @@
+flowchart LR
+
+Guest[👤 Guest]
+Receptionist[👨‍💼 Receptionist]
+Manager[👔 Manager]
+Admin[⚙️ Admin]
+Payment[💳 Payment Gateway]
+
+subgraph HMS[Hotel Management System]
+
+UC1((Search Rooms))
+UC2((Check Availability))
+UC3((Book Room))
+UC4((Register Customer))
+UC5((Generate Booking))
+UC6((Make Payment))
+UC7((Cancel Booking))
+UC8((View Booking Status))
+
+UC9((Check In Guest))
+UC10((Check Out Guest))
+UC11((Assign Room))
+UC12((Generate Invoice))
+UC13((Update Room Status))
+UC14((Manage Booking))
+
+UC15((Manage Rooms))
+UC16((Manage Employees))
+UC17((Manage Customers))
+UC18((Manage Pricing))
+UC19((View Reports))
+
+UC20((Manage Users))
+UC21((Manage Roles))
+UC22((System Configuration))
+UC23((Backup Database))
+
+end
+
+Guest --- UC1
+Guest --- UC3
+Guest --- UC7
+Guest --- UC8
+
+Receptionist --- UC9
+Receptionist --- UC10
+Receptionist --- UC11
+Receptionist --- UC12
+Receptionist --- UC13
+Receptionist --- UC14
+
+Manager --- UC15
+Manager --- UC16
+Manager --- UC17
+Manager --- UC18
+Manager --- UC19
+
+Admin --- UC20
+Admin --- UC21
+Admin --- UC22
+Admin --- UC23
+
+Payment --- UC6
+
+UC3 -. includes .-> UC1
+UC3 -. includes .-> UC2
+UC3 -. includes .-> UC4
+UC3 -. includes .-> UC5
+UC3 -. includes .-> UC6
+
+UC12 -. extends .-> UC10
