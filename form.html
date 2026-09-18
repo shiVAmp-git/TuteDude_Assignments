@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif; background-color: #e8f0fe; margin: 0; padding: 30px 15px; color: #333333;">
+
+    <form style="max-width: 500px; margin: 0 auto; background-color: #ffffff; padding: 25px 30px; border-radius: 8px; border: 1px solid #cbd5e1; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);">
+        <h2 style="text-align: center; color: #1e40af; margin-top: 0; margin-bottom: 20px; font-size: 22px; border-bottom: 2px solid #3b82f6; padding-bottom: 10px;">Registration Form</h2>
+
+        <!-- Firstname -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Firstname:</label>
+            <input type="text" name="firstname" placeholder="Enter first name" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;"/>
+        </div>
+
+        <!-- Middlename -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Middlename:</label>
+            <input type="text" name="middlename" placeholder="Enter middle name" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;"/>
+        </div>
+
+        <!-- Lastname -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Lastname:</label>
+            <input type="text" name="lastname" placeholder="Enter last name" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;"/>
+        </div>
+
+        <!-- Course -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Course:</label>
+            <select style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px; background-color: #ffffff;">
+                <option value="Course">Select Course</option>
+                <option value="BCA">BCA</option>
+                <option value="BBA">BBA</option>
+                <option value="B.Tech">B.Tech</option>
+                <option value="MBA">MBA</option>
+                <option value="MCA">MCA</option>
+                <option value="M.Tech">M.Tech</option>
+            </select>
+        </div>
+
+        <!-- Gender -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 6px; font-size: 14px;">Gender:</label>
+            <div style="display: flex; gap: 18px; font-size: 14px; align-items: center;">
+                <label style="cursor: pointer;"><input type="radio" name="gender" value="male" style="margin-right: 5px;"/> Male</label>
+                <label style="cursor: pointer;"><input type="radio" name="gender" value="female" style="margin-right: 5px;"/> Female</label>
+                <label style="cursor: pointer;"><input type="radio" name="gender" value="other" style="margin-right: 5px;"/> Other</label>
+            </div>
+        </div>
+
+        <!-- Date -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Date:</label>
+            <input type="date" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;"/>
+        </div>
+
+        <!-- Phone -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Phone:</label>
+            <div style="display: flex; gap: 8px;">
+                <input type="text" name="country code" value="+91" style="width: 60px; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; text-align: center; box-sizing: border-box; font-size: 14px;"/>
+                <input type="text" name="phone" placeholder="Enter phone number" style="flex: 1; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;"/>
+            </div>
+        </div>
+
+        <!-- Address -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Address:</label>
+            <textarea cols="80" rows="4" placeholder="Enter address" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px; resize: vertical;"></textarea>
+        </div>
+
+        <!-- Email -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Email:</label>
+            <input type="email" id="email" name="email" placeholder="example@email.com" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;"/>
+        </div>
+
+        <!-- Upload Resume -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Upload your Resume:</label>
+            <input type="file" style="width: 100%; padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 13px; background-color: #f8fafc;"/>
+        </div>
+
+        <!-- Password -->
+        <div style="margin-bottom: 14px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Password:</label>
+            <input type="password" id="pass" name="pass" placeholder="Enter password" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;"/>
+        </div>
+
+        <!-- Re-type Password -->
+        <div style="margin-bottom: 22px;">
+            <label style="display: block; font-weight: bold; margin-bottom: 5px; font-size: 14px;">Re-type password:</label>
+            <input type="password" id="repass" name="repass" placeholder="Re-enter password" style="width: 100%; padding: 8px 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; font-size: 14px;"/>
+        </div>
+
+        <!-- Submit Button -->
+        <input type="button" value="Submit" style="width: 100%; padding: 10px; background-color: #2563eb; color: #ffffff; border: none; border-radius: 4px; font-size: 16px; font-weight: bold; cursor: pointer;"/>
+    </form>
+
+</body>
+</html>
+
